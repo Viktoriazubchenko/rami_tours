@@ -1,0 +1,44 @@
+@import 'elements/variables';
+@import 'elements/mixins';
+@import 'elements/animations';
+@import 'elements/buttons';
+@import 'elements/forms';
+@import 'elements/overlay';
+@import 'elements/hamburger';
+@import 'sections/header';
+@import 'sections/promo';
+@import 'sections/info';
+@import 'sections/timer';
+@import 'sections/slider';
+@import 'sections/calculator';
+@import 'sections/contact';
+@import 'sections/footer';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Roboto Slab', serif;
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.page-content {
+    width: 100%;
+    min-height: 3000px;
+    background: url(../img/main_bg.jpg);
+    background-position: 50% 30%;
+}
+
+

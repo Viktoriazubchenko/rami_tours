@@ -1,0 +1,36 @@
+.timer {
+    padding: 10%;
+    text-align: center;
+    
+
+    
+    &__title {
+        font-size: 36px;
+        color: $main-color;
+        font-family: 'Laila', serif;
+        @include adaptive-font(36, 30);
+    }
+    &__subtitle {
+        font-size: 24px;
+        color: $light-color;
+        margin-top: 40px;
+        @include adaptive-font(24, 20);
+        
+    }
+    &__numbers {
+        color: $main-color;
+        margin-top: 40px;
+        font-size: 90px;
+        @include adaptive-font(90, 40);
+        
+        &::after {
+            content: '';
+            display: block;
+            width: 20%;
+            height: 1px;
+            background-color: $main-color;
+            margin: 0 auto;
+            margin-top: 4px;
+        }
+    }
+}

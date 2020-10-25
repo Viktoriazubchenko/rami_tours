@@ -1,0 +1,48 @@
+// Adaptive font
+
+$maxWidth: 1440;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+
+// Media breackpoints 
+
+@mixin extra-small-screens() {
+    @media only screen and (max-width: 420px) {
+      @content;
+    }
+}
+
+@mixin small-screens() {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+}
+
+@mixin medium-screens() {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+}
+
+@mixin medium-large-screens() {
+    @media only screen and (max-width: 820px) {
+      @content;
+    }
+}
+
+@mixin large-screens() {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+}
+
+@mixin extra-large-screens() {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+}

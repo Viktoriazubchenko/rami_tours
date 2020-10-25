@@ -1,0 +1,121 @@
+.slider {
+    text-align: center;
+    padding: 10%;
+    &__title {
+        font-size: 36px;
+        color: $main-color;
+        font-family: 'Laila', serif;
+        @include adaptive-font(36, 30);
+    }
+    &__wrap {
+        margin-top: 50px;
+        width: 100%;
+        position: relative;
+    }
+    &__item {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+        position: relative;
+        @include small-screens {
+            width: 90%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__dots {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        .dot {
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+            margin: 0 10px;
+            background-color: $secondary-color;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .dot-active {
+            background-color: $main-color;
+            height: 18px;
+            width: 18px;
+        }
+    }
+}
+.shadow {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    width: 90px;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    height: 100%;
+    @include small-screens {
+        display: none;
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        .arrow {
+            opacity: 1;
+        }
+    }
+}
+.shadow_next {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    width: 90px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    height: 100%;
+    right: 10%;
+    @include small-screens {
+        display: none;
+    }
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        .arrow_right {
+            opacity: 1;
+        }
+    }
+}
+.arrow {
+    width: 30px;
+    height: 30px;
+    background: url(../icons/left-arrow.svg) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: .4;
+    transition: 1s;
+    
+}
+
+.arrow_right {
+    width: 30px;
+    height: 30px;
+    background: url(../icons/right-arrow.svg) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: .4;
+    transition: 1s; 
+}
+
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+

@@ -1,0 +1,66 @@
+.calculator {
+    padding: 10%;
+    &__title {
+        font-size: 36px;
+        color: $main-color;
+        text-align: center;
+        font-family: 'Laila', serif;
+        @include adaptive-font(36, 30);
+    }
+    &__block {
+        margin-top: 40px;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include extra-small-screens {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__block-option {
+        font-size: 22px;
+        color: $main-color;
+        @include adaptive-font(22, 16);
+        
+    }
+    &__block-input {
+        display: block;
+        width: 120px;
+        height: 60px;
+        padding: 10px;
+        color: $main-color;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $secondary-color;
+        font-size: 46px;
+        text-align: center;
+        @include adaptive-font(46, 23);
+        @include extra-small-screens {
+            height: 35px;
+            width: 60px;
+        }
+    }
+    &__total {
+        margin-top: 10%;
+        padding-right: 50px;
+        text-align: left;
+        font-size: 38px;
+        color: $main-color;
+        @include adaptive-font(38, 25);
+        span {
+            font-size: 46px;
+            @include adaptive-font(46, 33);
+        }
+    }
+
+}
+#select {
+    width: 130px;
+    height: 35px;
+    padding-left: 10px;
+    background-color: $secondary-color;
+    color: $light-color;
+    border: none; 
+    margin-top: 10%;  
+}

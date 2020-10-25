@@ -1,0 +1,29 @@
+form {
+    input {
+        font-size: 17px;
+        display: block;
+        width: 60%;
+        height: 40px;
+        margin-top: 30px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $light-color;
+        color: $light-color;
+        @include adaptive-font(17, 12)
+    }
+    button {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        width: 150px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid $main-color;
+        color: $main-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 0 15px $main-color;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.contacts {
+    padding: 10%;
+}
+.contact {
+    width: 100%;
+    display: flex;
+    padding: 5%;
+    background-color: #373737;
+    margin: 0 auto;
+    margin-top: 150px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    @include small-screens {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img {
+        width: 50%;
+        @include small-screens {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            
+        }
+    }
+    &__form {
+        width: 50%;
+        padding-left: 10%;
+        @include small-screens {
+            width: 100%;
+        }
+    }
+    &__form-title {
+        margin-top: 10%;
+        color: $main-color;
+        font-size: 26px;
+        font-weight: 300;
+        @include adaptive-font(26, 17)
+    }   
+}
+

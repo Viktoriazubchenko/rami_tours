@@ -1,0 +1,30 @@
+.button {
+    width: 180px;
+    height: 45px;
+    line-height: 43px;
+    margin-top: 30px;
+    border: 1px solid $main-color;
+    font-size: 14px;
+    color: $main-color;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    @include extra-small-screens {
+        align-self: center;
+    }
+    
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 0px 15px $main-color;
+    }
+    &_big {
+        width: 225px;
+        height: 60px;
+        font-size: 18px;
+        margin-top: 10%;
+        @include extra-small-screens {
+            width: 210px;
+        }
+    }
+}
